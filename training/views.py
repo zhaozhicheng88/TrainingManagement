@@ -6,5 +6,4 @@ from .models import Profile
 # Create your views here.
 @login_required
 def index(request):
-    profile = get_object_or_404(Profile, user=request.user)
-    return render(request, 'training/index.html', {'profile': profile})
+    return render(request, 'training/index.html',)
