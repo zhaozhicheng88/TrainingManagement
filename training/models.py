@@ -43,7 +43,7 @@ class Course(models.Model):
     most = models.PositiveSmallIntegerField()
     starttime = models.DateTimeField()
     endtime = models.DateTimeField()
-    teacher = models.OneToOneField(Profile,on_delete=models.CASCADE,
+    teacher = models.ForeignKey(Profile,on_delete=models.CASCADE,
                                    related_name='course')
     students = models.ForeignKey(Profile,on_delete=models.CASCADE,
                                  related_name='courses')
